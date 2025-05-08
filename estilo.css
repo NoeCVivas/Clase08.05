@@ -1,0 +1,45 @@
+/* -------------------------------
+   Grid Container
+-------------------------------- */
+.grid-container {
+  display: grid;
+  /* En mobile, una columna */
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.item {
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* -------------------------------
+   Breakpoint: Tablet
+   (min-width: 600px)
+-------------------------------- */
+@media (min-width: 600px) {
+  .grid-container {
+    /* Dos columnas */
+    grid-template-columns: repeat(2, 1fr);
+    /* Dos filas */
+    grid-template-rows: repeat(2, auto);
+  }
+}
+
+/* -------------------------------
+   Breakpoint: Desktop
+   (min-width: 1024px)
+-------------------------------- */
+@media (min-width: 1024px) {
+  .grid-container {
+    /* Cuatro columnas */
+    grid-template-columns: repeat(4, 1fr);
+    /* Una sola fila */
+    grid-template-rows: auto;
+  }
+}
